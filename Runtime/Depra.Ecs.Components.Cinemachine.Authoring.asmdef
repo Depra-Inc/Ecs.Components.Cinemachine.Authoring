@@ -1,0 +1,21 @@
+{
+    "name": "Depra.Ecs.Components.Cinemachine.Authoring",
+    "rootNamespace": "Depra.Ecs.Components.Cinemachine.Authoring",
+    "references": [
+        "GUID:31e749fd47b69ec43a1d7943154bf759",
+        "GUID:e26e79c2120fe6b48b93f825f9528a77",
+        "GUID:4307f53044263cf4b835bd812fc161a4"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Depra.Ecs.dll",
+        "Depra.Ecs.QoL.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

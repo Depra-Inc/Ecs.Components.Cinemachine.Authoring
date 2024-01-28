@@ -1,12 +1,24 @@
 {
-	"name": "com.depra.template",
+	"name": "com.depra.ecs.components.cinemachine.authoring",
 	"version": "0.0.1",
-	"displayName": "Unity Package Template",
-	"description": "Template for creating Unity game engine packages.",
+	"displayName": "Depra.Ecs.Components.Cinemachine.Authoring",
+	"description": "Authoring components for Unity Cinemachine types.",
 	"unity": "2022.3",
 	"license": "Apache-2.0",
-  "dependencies": {},
-	"keywords": [],
+	"dependencies": {
+		"com.depra.ecs.hybrid": "0.1.5",
+		"com.depra.ecs.components.cinemachine": "0.0.1"
+	},
+	"keywords": [
+		"depra",
+		"ecs",
+		"unity",
+		"hybrid",
+		"baking",
+		"authoring",
+		"components",
+		"cinemachine"
+	],
 	"author": {
 		"name": "Depra, Inc.",
 		"email": "n.melnikov@depra.org",
@@ -14,6 +26,6 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Depra-Inc/Template.Package.Unity.git"
+		"url": "https://github.com/Depra-Inc/Ecs.Components.Cinemachine.Authoring.git"
 	}
 }

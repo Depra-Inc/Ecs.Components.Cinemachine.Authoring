@@ -1,1 +1,1 @@
-# Template.Package.Unity
+# Ecs.Components.Cinemachine.Authoring
