@@ -13,17 +13,17 @@ namespace Depra.Ecs.Components.Cinemachine.Authoring
 {
 	[DisallowMultipleComponent]
 	[AddComponentMenu(MENU_PATH + nameof(CinemachineVirtualCameraRef), DEFAULT_ORDER)]
-	public sealed class CameraAuthoringComponent : MonoBehaviour, IAuthoring
+	public sealed class CinemachineVirtualCameraAuthoringComponent : MonoBehaviour, IAuthoring
 	{
-		[SerializeField] private CinemachineVirtualCameraBase _value;
+		[SerializeField] private CinemachineVirtualCamera _value;
 
 		IBaker IAuthoring.CreateBaker() => new Baker(this);
 
 		private readonly struct Baker : IBaker
 		{
-			private readonly CameraAuthoringComponent _component;
+			private readonly CinemachineVirtualCameraAuthoringComponent _component;
 
-			public Baker(CameraAuthoringComponent component) => _component = component;
+			public Baker(CinemachineVirtualCameraAuthoringComponent component) => _component = component;
 
 			void IBaker.Bake(IAuthoring authoringEntity, World world)
 			{
