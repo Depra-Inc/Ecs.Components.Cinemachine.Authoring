@@ -4,7 +4,7 @@
 using Cinemachine;
 using Depra.Ecs.Hybrid.Components;
 using Depra.Ecs.Hybrid.Entities;
-using Depra.Ecs.QoL.Worlds;
+using Depra.Ecs.QoL.Components;
 using Depra.Ecs.Worlds;
 using UnityEngine;
 using static Depra.Ecs.Components.Cinemachine.Authoring.Module;
@@ -29,7 +29,7 @@ namespace Depra.Ecs.Components.Cinemachine.Authoring
 			{
 				if (((IAuthoringEntity) authoringEntity).Unpack(out var entity))
 				{
-					world.Pool<CinemachineVirtualCameraBaseRef>().Allocate(entity).Value = _component._value;
+					world.Pools.Get<CinemachineVirtualCameraBaseRef>().Allocate(entity).Value = _component._value;
 				}
 			}
 		}
