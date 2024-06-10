@@ -4,12 +4,12 @@
 using Cinemachine;
 using Depra.Ecs.Hybrid.Components;
 using Depra.Ecs.Hybrid.Entities;
-using Depra.Ecs.QoL.Worlds;
-using Depra.Ecs.Weapon.ShootingCameraShake.Authoring;
+using Depra.Ecs.QoL.Components;
 using Depra.Ecs.Worlds;
 using UnityEngine;
+using static Depra.Ecs.Components.Cinemachine.Authoring.Module;
 
-namespace Depra.Ecs.Weapon.Shooting.CameraShake.Authoring
+namespace Depra.Ecs.Components.Cinemachine.Authoring
 {
     [DisallowMultipleComponent]
     [AddComponentMenu(MENU_PATH + nameof(ImpulseSourceRef), DEFAULT_ORDER)]
