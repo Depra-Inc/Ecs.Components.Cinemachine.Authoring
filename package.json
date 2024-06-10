@@ -1,6 +1,6 @@
 {
 	"name": "com.depra.ecs.components.cinemachine.authoring",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"displayName": "Depra.Ecs.Components.Cinemachine.Authoring",
 	"description": "Authoring components for Unity Cinemachine types.",
 	"unity": "2022.3",
