@@ -16,11 +16,13 @@ namespace Depra.Ecs.Components.Cinemachine.Authoring
     public sealed class CinemachineImpulseSourceAuthoringComponent : MonoBehaviour, IAuthoring
     {
         [SerializeField] private CinemachineImpulseSource _value;
-
+        
         IBaker IAuthoring.CreateBaker() => new Baker(this);
+        
         private readonly struct Baker : IBaker
         { 
             private readonly CinemachineImpulseSourceAuthoringComponent _component;
+            
             public Baker(CinemachineImpulseSourceAuthoringComponent component) => _component = component;
             
             void IBaker.Bake(IAuthoring authoring, World world)
