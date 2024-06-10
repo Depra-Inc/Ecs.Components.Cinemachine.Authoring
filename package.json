@@ -7,7 +7,7 @@
 	"license": "Apache-2.0",
 	"dependencies": {
 		"com.depra.ecs.hybrid": "0.1.7",
-		"com.depra.ecs.components.cinemachine": "0.0.4"
+		"com.depra.ecs.components.cinemachine": "0.0.5"
 	},
 	"keywords": [
 		"depra",
