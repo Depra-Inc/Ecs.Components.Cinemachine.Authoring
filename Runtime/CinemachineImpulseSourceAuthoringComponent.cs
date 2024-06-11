@@ -4,7 +4,7 @@
 using Cinemachine;
 using Depra.Ecs.Hybrid.Components;
 using Depra.Ecs.Hybrid.Entities;
-using Depra.Ecs.QoL.Components;
+using Depra.Ecs.QoL.Worlds;
 using Depra.Ecs.Worlds;
 using UnityEngine;
 using static Depra.Ecs.Components.Cinemachine.Authoring.Module;
@@ -12,7 +12,7 @@ using static Depra.Ecs.Components.Cinemachine.Authoring.Module;
 namespace Depra.Ecs.Components.Cinemachine.Authoring
 {
     [DisallowMultipleComponent]
-    [AddComponentMenu(MENU_PATH + nameof(ImpulseSourceRef), DEFAULT_ORDER)]
+    [AddComponentMenu(MENU_PATH + nameof(CinemachineImpulseSourceRef), DEFAULT_ORDER)]
     public sealed class CinemachineImpulseSourceAuthoringComponent : MonoBehaviour, IAuthoring
     {
         [SerializeField] private CinemachineImpulseSource _value;
@@ -29,7 +29,7 @@ namespace Depra.Ecs.Components.Cinemachine.Authoring
             {
                 if (((IAuthoringEntity) authoring).Unpack(out var entity))
                 {
-                    world.Pool<ImpulseSourceRef>().Allocate(entity).Value = _component._value;
+                    world.Pool<CinemachineImpulseSourceRef>().Allocate(entity).Value = _component._value;
                 }
             }
         }
