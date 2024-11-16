@@ -2,10 +2,8 @@
 // © 2024 Nikolay Melnikov <n.melnikov@depra.org>
 
 using Cinemachine;
-using Depra.Ecs.Hybrid.Components;
-using Depra.Ecs.Hybrid.Entities;
-using Depra.Ecs.QoL.Worlds;
-using Depra.Ecs.Worlds;
+using Depra.Ecs.Hybrid;
+using Depra.Ecs.QoL;
 using UnityEngine;
 using static Depra.Ecs.Components.Cinemachine.Authoring.Module;
 
@@ -27,7 +25,7 @@ namespace Depra.Ecs.Components.Cinemachine.Authoring
 
 			void IBaker.Bake(IAuthoring authoringEntity, World world)
 			{
-				if (((IAuthoringEntity) authoringEntity).Unpack(out var entity))
+				if (((IAuthoringEntity)authoringEntity).Unpack(out var entity))
 				{
 					world.Pool<CinemachineVirtualCameraBaseRef>().Allocate(entity).Value = _component._value;
 				}

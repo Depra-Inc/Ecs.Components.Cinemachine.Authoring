@@ -2,10 +2,8 @@
 // © 2024 Evgeniy Kraevskiy <e.craevsky@depra.org>
 
 using Cinemachine;
-using Depra.Ecs.Hybrid.Components;
-using Depra.Ecs.Hybrid.Entities;
-using Depra.Ecs.QoL.Worlds;
-using Depra.Ecs.Worlds;
+using Depra.Ecs.Hybrid;
+using Depra.Ecs.QoL;
 using UnityEngine;
 using static Depra.Ecs.Components.Cinemachine.Authoring.Module;
 
