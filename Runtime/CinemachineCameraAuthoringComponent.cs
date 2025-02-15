@@ -10,24 +10,24 @@ using static Depra.Ecs.Components.Cinemachine.Authoring.Module;
 namespace Depra.Ecs.Components.Cinemachine.Authoring
 {
 	[DisallowMultipleComponent]
-	[AddComponentMenu(MENU_PATH + nameof(CinemachineVirtualCameraBaseRef), DEFAULT_ORDER)]
-	internal sealed class CinemachineVirtualCameraBaseAuthoringComponent : MonoBehaviour, IAuthoring
+	[AddComponentMenu(MENU_PATH + nameof(CinemachineCameraRef), DEFAULT_ORDER)]
+	internal sealed class CinemachineCameraAuthoringComponent : MonoBehaviour, IAuthoring
 	{
-		[SerializeField] private CinemachineVirtualCameraBase _value;
+		[SerializeField] private CinemachineCamera _value;
 
 		IBaker IAuthoring.CreateBaker() => new Baker(this);
 
 		private readonly struct Baker : IBaker
 		{
-			private readonly CinemachineVirtualCameraBaseAuthoringComponent _component;
+			private readonly CinemachineCameraAuthoringComponent _component;
 
-			public Baker(CinemachineVirtualCameraBaseAuthoringComponent component) => _component = component;
+			public Baker(CinemachineCameraAuthoringComponent component) => _component = component;
 
 			void IBaker.Bake(IAuthoring authoringEntity, World world)
 			{
 				if (((IAuthoringEntity)authoringEntity).Unpack(out var entity))
 				{
-					world.Pool<CinemachineVirtualCameraBaseRef>().Allocate(entity).Value = _component._value;
+					world.Pool<CinemachineCameraRef>().Allocate(entity).Value = _component._value;
 				}
 			}
 		}

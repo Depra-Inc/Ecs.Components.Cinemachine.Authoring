@@ -1,13 +1,14 @@
 {
 	"name": "com.depra.ecs.components.cinemachine.authoring",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"displayName": "Depra.Ecs.Components.Cinemachine.Authoring",
 	"description": "Authoring components for Unity Cinemachine types.",
 	"unity": "2022.3",
 	"license": "Apache-2.0",
 	"dependencies": {
 		"com.depra.ecs.hybrid": "0.2.8",
-		"com.depra.ecs.components.cinemachine": "0.0.8"
+		"com.depra.ecs.components.cinemachine": "0.0.8",
+		"com.unity.cinemachine": "3.1.3"
 	},
 	"keywords": [
 		"ecs",
